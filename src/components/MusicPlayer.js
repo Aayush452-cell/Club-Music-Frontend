@@ -4,6 +4,7 @@ import PlayArrowIcon from "@material-ui/icons/PlayArrow";
 import PauseIcon from "@material-ui/icons/Pause";
 import SkipNextIcon from "@material-ui/icons/SkipNext";
 import PlayArrow from "@material-ui/icons/PlayArrow";
+import { BASE_URL } from "../config";
 
 const MusicPlayer = (props) => {
   

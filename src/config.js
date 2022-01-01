@@ -1,2 +1,2 @@
-BASE_URL = "https://clubmusicapi.herokuapp.com/"
-export default BASE_URL;
+const BASE_URL = "https://clubmusicapi.herokuapp.com/"
+export {BASE_URL};

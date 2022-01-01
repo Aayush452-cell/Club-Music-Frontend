@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Grid, Button, Typography } from "@mui/material";
 import CreateRoomPage from "./CreateRoomPage";
 import MusicPlayer from "./MusicPlayer";
+import { BASE_URL } from "../config";
 
 const Room = (props) => {
   let { roomcode } = useParams();

@@ -2,6 +2,7 @@ import React,{useState} from "react";
 import { useNavigate } from "react-router";
 import { TextField,Button,Grid,Typography } from "@mui/material";
 import { Link } from "react-router-dom";
+import { BASE_URL } from "../config";
 
 const RoomJoinPage = () => {
   

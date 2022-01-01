@@ -14,6 +14,7 @@ import {
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router";
+import { BASE_URL } from "../config";
 
 const CreateRoomPage = (props) => {
   let navigate = useNavigate();
