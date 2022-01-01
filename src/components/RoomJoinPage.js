@@ -21,7 +21,7 @@ const RoomJoinPage = () => {
                 code: roomCode,
             }),
         };
-        fetch('api/join-room/', requestOptions)
+        fetch(BASE_URL+'api/join-room/', requestOptions)
             .then((response) => {
                 if(response.ok){
                     navigate("/room/"+roomCode);

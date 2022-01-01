@@ -22,7 +22,7 @@ const Room = (props) => {
   }, [roomcode]);
 
   let getRoom = async () => {
-    let response = await fetch("/api/get-room" + "?code=" + roomcode);
+    let response = await fetch(BASE_URL+"/api/get-room" + "?code=" + roomcode);
     if (!response.ok) {
       navigate("/");
       return;
@@ -38,7 +38,7 @@ const Room = (props) => {
   };
 
   let getCurrentSong = () => {
-      fetch("/spotify/current-song")
+      fetch(BASE_URL+"/spotify/current-song")
       .then((response) => {
           if(!response.ok){
               return {};
@@ -54,7 +54,7 @@ const Room = (props) => {
 
   let authenticateSpotify = () => {
       console.log("authenticating");
-      fetch("/spotify/is-authenticated")
+      fetch(BASE_URL+"/spotify/is-authenticated")
       .then((response) => response.json())
       .then((data) => {
             setspotifyauthenticated(data.status);
@@ -74,7 +74,7 @@ const Room = (props) => {
       method: "POST",
       headers: { "Content-Type": "application/json" },
     };
-    fetch("/api/leave-room/", requestOptions).then((_response) => {
+    fetch(BASE_URL+"/api/leave-room/", requestOptions).then((_response) => {
       navigate("/");
     });
   };

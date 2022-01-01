@@ -2,6 +2,7 @@ import React,{useState,useEffect} from "react";
 import { Link } from "react-router-dom";
 import { Grid, Typography, ButtonGroup, Button } from "@mui/material";
 import { useNavigate } from "react-router";
+import BASE_URL from "../config";
 
 const Homepage = () => {
 
@@ -9,7 +10,7 @@ const Homepage = () => {
    
    useEffect(() => {
         (async () => {
-            fetch("api/user-in-room/")
+            fetch(BASE_URL+"api/user-in-room/")
             .then(response => response.json())
             .then((data) => {
                 console.log(data)

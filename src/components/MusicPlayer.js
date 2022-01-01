@@ -14,7 +14,7 @@ const MusicPlayer = (props) => {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
           };
-          fetch("/spotify/pause", requestOptions);
+          fetch(BASE_URL+"/spotify/pause", requestOptions);
     }
 
     let playSong = () => {
@@ -22,7 +22,7 @@ const MusicPlayer = (props) => {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
           };
-          fetch("/spotify/play", requestOptions);
+          fetch(BASE_URL+"/spotify/play", requestOptions);
     }
 
     let skipSong = () => {
@@ -30,7 +30,7 @@ const MusicPlayer = (props) => {
             method: "POST",
             headers: { "Content-Type": "application/json" },
           };
-          fetch("/spotify/skip", requestOptions)
+          fetch(BASE_URL+"/spotify/skip", requestOptions)
           .then((response) => response.json())
           .then((data) => {
             console.log(data);

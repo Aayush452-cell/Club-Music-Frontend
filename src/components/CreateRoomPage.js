@@ -39,7 +39,7 @@ const CreateRoomPage = (props) => {
         guest_can_pause: guestCanPause,
       }),
     };
-    fetch("api/create-room/", requestOptions)
+    fetch(BASE_URL+"api/create-room/", requestOptions)
       .then((response) => response.json())
       .then((data) => navigate("/room/" + data.code));
   };
@@ -54,7 +54,7 @@ const CreateRoomPage = (props) => {
         code: props.roomcode,
       }),
     };
-    fetch("/api/update-room/", requestOptions).then((response) => {
+    fetch(BASE_URL+"/api/update-room/", requestOptions).then((response) => {
         if (response.ok) {
           setsuccessMsg("Room updated successfully !");
         } else {
