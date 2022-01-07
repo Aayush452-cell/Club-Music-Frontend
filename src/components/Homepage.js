@@ -22,6 +22,8 @@ const Homepage = () => {
                 else{
                     navigate("/");
                 }
+            }).catch(err => {
+              navigate("/");
             });
         })()
    },[])
