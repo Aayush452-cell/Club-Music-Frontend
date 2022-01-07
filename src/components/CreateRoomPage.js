@@ -58,7 +58,7 @@ const CreateRoomPage = (props) => {
         code: props.roomcode,
       }),
     };
-    fetch(BASE_URL+"/api/update-room/", requestOptions).then((response) => {
+    fetch(BASE_URL+"api/update-room/", requestOptions).then((response) => {
         if (response.ok) {
           setsuccessMsg("Room updated successfully !");
         } else {
