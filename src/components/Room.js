@@ -82,9 +82,7 @@ const Room = (props) => {
     fetch(BASE_URL+"/api/leave-room/", requestOptions).then((_response) => {
       navigate("/");
     });
-  }.catch(err => {
-              navigate("/");
-            });
+  }
 
   let renderSettingsButton = () => {
     return (
