@@ -42,7 +42,10 @@ const CreateRoomPage = (props) => {
     };
     fetch(BASE_URL+"api/create-room/", requestOptions)
       .then((response) => response.json())
-      .then((data) => navigate("/room/" + data.code));
+      .then((data) => navigate("/room/" + data.code))
+      .catch(err => {
+              navigate("/");
+          });
   };
 
   let handleUpdateButtonPressed = () => {
@@ -62,7 +65,9 @@ const CreateRoomPage = (props) => {
           seterrorMsg("Error while updating room !");
         }
         props.updateCallback();
-      });
+      }).catch(err => {
+              navigate("/");
+            });
     }
 
   let renderCreateButtons = () => {
