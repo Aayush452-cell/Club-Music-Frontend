@@ -50,7 +50,9 @@ const Room = (props) => {
       .then((data) => {
             setsong(data);
             //console.log(data);
-      });
+      }).catch(err => {
+              navigate("/");
+            });
   }
 
   let authenticateSpotify = () => {
@@ -67,7 +69,9 @@ const Room = (props) => {
                     window.location.replace(data.url);
                 });
             }
-      });
+      }).catch(err => {
+              navigate("/");
+            });
   }
 
   let leaveButtonPressed = () => {
@@ -78,7 +82,9 @@ const Room = (props) => {
     fetch(BASE_URL+"/api/leave-room/", requestOptions).then((_response) => {
       navigate("/");
     });
-  };
+  }.catch(err => {
+              navigate("/");
+            });
 
   let renderSettingsButton = () => {
     return (
