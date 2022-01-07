@@ -49,7 +49,7 @@ const Room = (props) => {
       })
       .then((data) => {
             setsong(data);
-            //console.log(data);
+            console.log(data);
       }).catch(err => {
               navigate("/");
             });
